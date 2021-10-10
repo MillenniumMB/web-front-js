@@ -1,0 +1,187 @@
+
+.b_page {
+    font-family: Arial, serif;
+    width:100%;
+    margin:0;
+    background: white;
+}
+
+
+.b-page__head-line{
+    width:100%;
+}
+
+.b-page__line{
+    background: linear-gradient(to top, #B8860B, white);
+    margin: 30px;
+}
+
+.b-page__footer{
+    background: black;
+    color: #F9F0DA;
+}
+
+.heading{
+    text-transform: uppercase;
+    font-family: "Arial Black", serif;
+    font-weight: bold;
+    font-stretch: semi-condensed;
+}
+
+.b-header{
+    height:200px;
+    background-image: url("/images/back2.jpg");
+    background-position: 100% 35%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.b-head__heading{
+    float: left;
+    padding-left: 30%;
+    padding-right: 20%;
+    padding-top: 3%;
+}
+
+.heading__header{
+    font-family: "Freestyle Script", fangsong;
+    color: #F9F0DA;
+    font-style: italic;
+    text-align: center;
+    font-weight: 900;
+    font-size:32px;
+}
+
+
+.b-head__form{
+    float: right;
+
+}
+
+
+
+.form__header {
+    background: transparent;
+    position: relative;
+    width: 200px;
+    margin: 0 auto;
+}
+.input__form, .button__form {
+    outline: none;
+    background: transparent;
+}
+.input__form {
+    width: 100%;
+    height: 42px;
+    padding-left: 15px;
+    border: 3px solid #F9F0DA;
+}
+.button__form {
+    border: none;
+    height: 42px;
+    width: 42px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    color: #F9F0DA;
+}
+
+
+.b-menu
+{
+    margin:0;
+    padding:0;
+    list-style:none;
+    width:100%;
+    display:table;
+    table-layout: fixed;
+    box-shadow: 0px 0px 4px 2px black;
+
+}
+
+.menu__item
+{
+    text-align:center;
+    color:goldenrod;
+    cursor:pointer;
+    font-size:14px;
+    height:38px;
+    background-color: goldenrod;
+    line-height:38px;
+    border: 1px solid darkgoldenrod;
+    display:table-cell;
+
+}
+
+.menu__item_active
+{
+    color: beige;
+    background-color: darkgoldenrod;
+    border:1px solid darkgoldenrod;
+}
+
+
+
+
+
+.b-article{
+    float: left;
+    width: 30%;
+}
+
+.b-section{
+    margin-left: 30%;
+
+}
+
+.event__article{
+    text-align: center;
+    padding: 2%;
+    border:5px inset darkgoldenrod;
+    background-color: white;
+    margin: 4%;
+}
+
+
+
+.blockquote__section{
+    text-align:center;
+    border: 6px solid transparent;
+    border-image: linear-gradient(to right, transparent 0%, darkgoldenrod 100%);
+    border-image-slice: 1;
+}
+
+.cite__blockquote{
+    text-align:right;
+}
+
+.img__team{
+    box-shadow: 0px 0px 15px 5px #000;
+}
+
+
+.figcaption__team{
+    font-style: italic;
+}
+
+.float_clear{
+    clear:both
+}
+
+.footer_logo{
+    float:right;
+}
+
+.social__footer{
+    padding: 50px;
+    float:left;
+}
+
+.text__social{
+    font-style: italic;
+}
+
+.link__social{
+    cursor: pointer;
+}
