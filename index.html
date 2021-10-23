@@ -5,101 +5,110 @@
     <link rel="stylesheet" href="CSS/styles.css" type="text/css">
     <meta charset="utf-8">
     <meta name="keywords" content="Гендерная интрига, ИТМО Панчлайн">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital@1&display=swap" rel="stylesheet">
 </head>
 
-<body class = b_page>
+<body class = b-page>
 
-<div class="b-page__head-line">
-    <header class = "b-header">
+<div class="b-page__line-header">
+    <nav class="b-page__head-line">
+        <ul class="b-menu">
+            <li class = "menu__item menu__item_active">
+                Главная страница
+            </li>
+            <li class = "menu__item">
+                <a class = "menu__link" href="/video/">Видео</a>
+            </li>
+            <li class = "menu__item">
+                <a class = "menu__link" href="/connection/">Обратная связь</a>
+            </li>
+            <li class = "menu__item">
+                <div class = b-head__form>
+                    <form class = "form__header">
+                        <input class = "input__form"  type="text" placeholder="Искать здесь...">
+                        <button class = "button__form" type="submit">Go</button>
+                    </form>
+                </div>
+            </li>
+        </ul>
+    </nav>
 
-        <div class="b-head__heading">
-            <h1 class = "heading heading__header">
-                Гендерная интрига
-            </h1>
-        </div>
 
-        <div class = b-head__form>
-            <form class = "form__header">
-                <input class = "input__form"  type="text" placeholder="Искать здесь...">
-                <button class = "button__form" type="submit">Go</button>
-            </form>
-        </div>
-        <div class = float_clear></div>
-    </header>
+    <div class="b-page__head-line">
+        <header class = "b-header">
+
+            <div class="b-head__heading">
+                <h1 class = "heading heading__header">
+                    Гендерная интрига
+                </h1>
+            </div>
+        </header>
+    </div>
+
+</div>
+
+<div class ="b-page__line-black">
+    <div class = blockquote__section>
+        <blockquote>
+            <p>Hаша команда как фраза ”ВЫ ЗАКРЫЛИ ВСЕ ДОЛГИ”, все хотят нас услышать</p>
+            <cite class="cite__blockquote">Павел Борисенко</cite>
+        </blockquote>
+    </div>
 </div>
 
 
-<nav class="b-page__head-line">
-    <ul class="b-menu">
-        <li class = "menu__item menu__item_active">
-            Главная страница
-        </li>
-        <li class = "menu__item">
-            <a class = "menu__link" href="/video/">Видео</a>
-        </li>
-        <li class = "menu__item">
-            <a class = "menu__link" href="/connection/">Обратная связь</a>
-        </li>
-    </ul>
-</nav>
-
-
-
 <main class = "b-page__line">
-    <article class = b-article>
-        <div class = "event__article">
-            <h3 class = "heading">Ближайшее событие:</h3>
-            <p>Встреча участников ИТМО "Панчлайн" <strong>13 октября</strong></p>
-            <a href="https://vk.com/itmopunchline" target="_blank">Подробнее...</a>
-        </div>
-    </article>
+    <div class = "b-page__line-first">
+        <section class = b-section>
 
-    <section class = b-section>
+            <div class="main_text__section">
+                <h2 class = "heading">О нас</h2>
+                <p class="text__main">Команда КВН одного из крупнейшего проекта Итмо “Панчлайн” в рамках MegaBATL. Была создана в 2020 году по инициативе всех участников. Участвовали в 2-ух сезонах этого юмористического шоу, во 2-ом сезоне взяли 3 награды «Лучший актер», «Лучшая визитная карточка» и 2-ое место среди всех команд</p>
+                <p class="text__main">Занимаемся серьезно, поэтому много свободного времени уделяем сборам, но не все так плохо, все мы одна большая команда и хорошие друзья, так что кроме этого, участников нашей команды можно встретить в таких проектах, как «Импровизация», «Битва миниатюр» и др. Также мы очень любим потусить в барах, все кроме Рашида, он мусульманин)). Так что если есть предложения, пишите </p>
+                <p class="text__main">Так что если ты креативный первокурсник, который не против развиваться в юмористическом плане, помогать с написанием материала и сидеть включать звук на выступление, то велком к нам :) </p>
+            </div>
+        </section>
 
-        <div class = blockquote__section>
-            <blockquote>
-                <p>Hаша команда как фраза ”ВЫ ЗАКРЫЛИ ВСЕ ДОЛГИ”, все хотят нас услышать</p>
-                <cite class="cite__blockquote">Павел Борисенко</cite>
-            </blockquote>
-        </div>
+        <article class = b-article>
+            <div class = "event__article">
+                <h3 class = "heading">Ближайшее событие:</h3>
+                <p>Встреча участников ИТМО "Панчлайн" <strong>26 октября</strong></p>
+                <a href="https://vk.com/itmopunchline" target="_blank">Подробнее...</a>
+            </div>
+        </article>
+        <div class = float_clear></div>
+    </div>
 
-
-        <div class="main_text__section">
-            <h2 class = "heading">О нас</h2>
-            <p class="text__main">Команда КВН одного из крупнейшего проекта Итмо “Панчлайн” в рамках MegaBATL. Была создана в 2020 году по инициативе всех участников. Участвовали в 2-ух сезонах этого юмористического шоу, во 2-ом сезоне взяли 3 награды «Лучший актер», «Лучшая визитная карточка» и 2-ое место среди всех команд</p>
-            <p class="text__main">Занимаемся серьезно, поэтому много свободного времени уделяем сборам, но не все так плохо, все мы одна большая команда и хорошие друзья, так что кроме этого, участников нашей команды можно встретить в таких проектах, как «Импровизация», «Битва миниатюр» и др. Также мы очень любим потусить в барах, все кроме Рашида, он мусульманин)). Так что если есть предложения, пишите </p>
-            <p class="text__main">Так что если ты креативный первокурсник, который не против развиваться в юмористическом плане, помогать с написанием материала и сидеть включать звук на выступление, то велком к нам :) </p>
-        </div>
-
-
-        <div class="team__section">
+        <div class="team__section, container">
             <h2 class = "heading">Наша команда</h2>
-            <figure class = "figure__team">
-                <img class = "img__team" src="images/Bogdan.jpg" width="100" height="100" alt="">
+            <figure class = "figure__team, figure__team-1">
+                <img class = "img__team" src="images/Bogdan.jpg" width="250" height="250" alt="">
                 <figcaption class="figcaption__team">Богдан</figcaption>
             </figure>
-            <figure class = "figure__team">
-                <img class = "img__team" src="images/Milena.png" width="100" height="100">
+            <figure class = "figure__team, figure__team-2">
+                <img class = "img__team" src="images/Milena.png" width="250" height="250">
                 <figcaption class="figcaption__team">Милена</figcaption>
             </figure>
-            <figure class = "figure__team">
-                <img class = "img__team" src="images/Pasha.png" width="100" height="100">
+            <figure class = "figure__team, figure__team-3">
+                <img class = "img__team" src="images/Pasha.png" width="250" height="250">
                 <figcaption class="figcaption__team">Паша</figcaption>
             </figure>
-            <figure class = "figure__team">
-                <img class = "img__team" src="images/Rashid.png" width="100" height="100">
+            <figure class = "figure__team, figure__team-4">
+                <img class = "img__team" src="images/Rashid.png" width="250" height="250">
                 <figcaption class="figcaption__team">Рашид</figcaption>
             </figure>
-            <figure class = "figure__team">
-                <img class = "img__team" src="images/Sanya.png" width="100" height="100">
+            <figure class = "figure__team, figure__team-5">
+                <img class = "img__team" src="images/Sanya.png" width="250" height="250">
                 <figcaption class="figcaption__team">Саня</figcaption>
             </figure>
-            <figure class = "figure__team">
-                <img class = "img__team" src="images/Vlad.png" width="100" height="100">
+            <figure class = "figure__team, figure__team-6">
+                <img class = "img__team" src="images/Vlad.png" width="250" height="250">
                 <figcaption class="figcaption__team">Влад</figcaption>
             </figure>
         </div>
-    </section>
+
 
 
 </main>
@@ -113,7 +122,7 @@
             <a class ="link__social" href="https://www.instagram.com/gender_intriga/?hl=ru" target="_blank"><img src="images/inst2.png" width="15" height="15">ИНСТАГРАММЕ</a>
         </p>
         <p class = "text__social">Итмо "Панчлайн"
-            <a class link__social href="https://vk.com/itmopunchline" target="_blank"><img src="images/vk3.png" width="15" height="15">ВКОНТАКТЕ</a>
+            <a class = "link__social" href="https://vk.com/itmopunchline" target="_blank"><img src="images/vk3.png" width="15" height="15">ВКОНТАКТЕ</a>
         </p>
     </div>
 
