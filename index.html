@@ -3,6 +3,7 @@
 <head>
     <title>Гендерная интрига</title>
     <link rel="stylesheet" href="CSS/styles.css" type="text/css">
+    <script src="JS/JS.js"></script>
     <meta charset="utf-8">
     <meta name="keywords" content="Гендерная интрига, ИТМО Панчлайн">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,23 +16,22 @@
 <div class="b-page__line-header">
     <nav class="b-page__head-line">
         <ul class="b-menu">
-            <li class = "menu__item menu__item_active">
-                Главная страница
+            <li class = "menu__item ">
+                <a class = "menu__link floating-button menu__item_active" href="index.html">Главная страница</a>
             </li>
             <li class = "menu__item">
-                <a class = "menu__link" href="/video/">Видео</a>
+                <a class = "menu__link floating-button" href="video.html">Видео</a>
             </li>
             <li class = "menu__item">
-                <a class = "menu__link" href="/connection/">Обратная связь</a>
+                <a class = "menu__link floating-button" href="connection.html">Обратная связь</a>
             </li>
-            <li class = "menu__item">
-                <div class = b-head__form>
+                <div class = b-head__form b-head__form-b>
                     <form class = "form__header">
                         <input class = "input__form"  type="text" placeholder="Искать здесь...">
                         <button class = "button__form" type="submit">Go</button>
                     </form>
                 </div>
-            </li>
+
         </ul>
     </nav>
 
@@ -40,7 +40,7 @@
         <header class = "b-header">
 
             <div class="b-head__heading">
-                <h1 class = "heading heading__header">
+                <h1 class = "heading heading__header ">
                     Гендерная интрига
                 </h1>
             </div>
@@ -50,10 +50,10 @@
 </div>
 
 <div class ="b-page__line-black">
-    <div class = blockquote__section>
+    <div class = "blockquote__section" >
         <blockquote>
-            <p>Hаша команда как фраза ”ВЫ ЗАКРЫЛИ ВСЕ ДОЛГИ”, все хотят нас услышать</p>
-            <cite class="cite__blockquote">Павел Борисенко</cite>
+            <p class="anim-items ">Hаша команда как фраза ”ВЫ ЗАКРЫЛИ ВСЕ ДОЛГИ”, все хотят нас услышать</p>
+            <cite class="cite__blockquote anim-items ">Павел Борисенко</cite>
         </blockquote>
     </div>
 </div>
@@ -64,10 +64,10 @@
         <section class = b-section>
 
             <div class="main_text__section">
-                <h2 class = "heading">О нас</h2>
-                <p class="text__main">Команда КВН одного из крупнейшего проекта Итмо “Панчлайн” в рамках MegaBATL. Была создана в 2020 году по инициативе всех участников. Участвовали в 2-ух сезонах этого юмористического шоу, во 2-ом сезоне взяли 3 награды «Лучший актер», «Лучшая визитная карточка» и 2-ое место среди всех команд</p>
-                <p class="text__main">Занимаемся серьезно, поэтому много свободного времени уделяем сборам, но не все так плохо, все мы одна большая команда и хорошие друзья, так что кроме этого, участников нашей команды можно встретить в таких проектах, как «Импровизация», «Битва миниатюр» и др. Также мы очень любим потусить в барах, все кроме Рашида, он мусульманин)). Так что если есть предложения, пишите </p>
-                <p class="text__main">Так что если ты креативный первокурсник, который не против развиваться в юмористическом плане, помогать с написанием материала и сидеть включать звук на выступление, то велком к нам :) </p>
+                <h2 class = "heading anim-items">О нас</h2>
+                <p class="text__main anim-items">Команда КВН одного из крупнейшего проекта Итмо “Панчлайн” в рамках MegaBATL. Была создана в 2020 году по инициативе всех участников. Участвовали в 2-ух сезонах этого юмористического шоу, во 2-ом сезоне взяли 3 награды «Лучший актер», «Лучшая визитная карточка» и 2-ое место среди всех команд</p>
+                <p class="text__main anim-items">Занимаемся серьезно, поэтому много свободного времени уделяем сборам, но не все так плохо, все мы одна большая команда и хорошие друзья, так что кроме этого, участников нашей команды можно встретить в таких проектах, как «Импровизация», «Битва миниатюр» и др. Также мы очень любим потусить в барах, все кроме Рашида, он мусульманин)). Так что если есть предложения, пишите </p>
+                <p class="text__main anim-items">Так что если ты креативный первокурсник, который не против развиваться в юмористическом плане, помогать с написанием материала и сидеть включать звук на выступление, то велком к нам :) </p>
             </div>
         </section>
 
@@ -80,9 +80,9 @@
         </article>
         <div class = float_clear></div>
     </div>
-
+    <h2 class = "heading heading_team">Наша команда</h2>
         <div class="team__section, container">
-            <h2 class = "heading">Наша команда</h2>
+
             <figure class = "figure__team, figure__team-1">
                 <img class = "img__team" src="images/Bogdan.jpg" width="250" height="250" alt="">
                 <figcaption class="figcaption__team">Богдан</figcaption>
@@ -109,7 +109,30 @@
             </figure>
         </div>
 
+    <h3 class = "heading" >Долг за реквизит</h3>
 
+    <div class = table >
+        <div class = "line">
+            <p class = "first_column_table"></p>
+            <p class = "column_table column_table_b">Весеннее выступление</p>
+            <p class = "column_table column_table_b">Осеннее выступление</p>
+        </div>
+        <div class="line_first">
+            <p class = "first_column_table">Александр Прядкин </p>
+            <p class = "column_table">1200</p>
+            <p class = "column_table">956.8</p>
+        </div>
+        <div class="line_last">
+            <p class = "first_column_table">Бутовченко Милена</p>
+            <p class = "column_table">603</p>
+            <p class = "column_table">956.8</p>
+        </div>
+        <div class="line_first">
+            <p class = "first_column_table">Галеев Рашид</p>
+            <p class = "column_table">-</p>
+            <p class = "column_table">956.8</p>
+        </div>
+    </div>
 
 </main>
 
@@ -130,10 +153,14 @@
         <figure class figure__footer>
             <img src="images/logo2.jpg" width="250" height="150">
             <figcaption>&copy 2020 Гендерная Интрига</figcaption>
+            <p id="demo"></p>
         </figure>
     </div>
     <div class = float_clear></div>
+    <script src="JS/AnimScroll.js"></script>
 </footer>
+
+
 
 </body>
 </html>
