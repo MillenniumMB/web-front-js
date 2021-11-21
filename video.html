@@ -3,8 +3,11 @@
 <head>
     <title>Гендерная интрига</title>
     <link rel="stylesheet" href="CSS/styles.css" type="text/css">
+    <link rel="stylesheet" href="CSS/form.css" type="text/css">
+
     <meta charset="utf-8">
     <meta name="keywords" content="Гендерная интрига, ИТМО Панчлайн">
+    <script src="JS/Form.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital@1&display=swap" rel="stylesheet">
@@ -19,7 +22,7 @@
                 <a class = "menu__link floating-button" href="index.html">Главная страница</a>
             </li>
             <li class = "menu__item">
-                <a class = "menu__link floating-button menu__item_active" href="video.html">Видео</a>
+                <a class = "menu__link floating-button menu__item_active" href="video.html">Задачи</a>
             </li>
             <li class = "menu__item">
                 <a class = "menu__link floating-button" href="connection.html">Обратная связь</a>
@@ -59,14 +62,74 @@
 
 
 <main class = "b-page__line">
+
+
+
+    <div class = 'form_event'>
+
+        <div class = "left_column">
+            <form class="queue-web" id="queue-web">
+
+                <div class="line-flex">
+                <div class="queue-row">
+                  <!--  <label class="my-label" for="name">Имя:</label> -->
+                    <input required type="text" class = "input_form_p" id="name" name="Имя" placeholder="Введите имя..."/>
+                </div>
+
+                <div class="queue-row">
+                    <!-- <label class="my-label" for="task">Задача:</label> -->
+                     <input required type="text" id="task" class = "input_form_p" name="Задача"  placeholder="Введите задачу..."/>
+                 </div>
+                 <div class="queue-row">
+                    <!-- <label class="my-label">Дедлайн:</label> -->
+                     <input required type="text" class = "input_form_p" name="Дедлайн" placeholder="Введите дату дедлайна..." />
+                 </div>
+                </div>
+                 <div class="queue-row">
+                     <button type="button" class="queue-button shine-button" id="queue-btn">Добавить</button>
+                     <button type="button" class="queue-button shine-button" id="clear-btn">Очистить</button>
+                 </div>
+
+             </form>
+         </div>
+
+     <div class="table-responsive">
+         <table id="queue-table">
+
+             <thead>
+             <tr>
+                 <th>Имя</th>
+              <!--   <th>Фамилия</th> -->
+                <th>Задача</th>
+                <th>Дедлайн</th>
+                <th>Состояние</th>
+            </tr>
+            </thead>
+
+            <tbody id = "paragraph_table">
+            <tr>
+                <td>Для всех</td>
+                <td>Выполнить свои обязанности до выступления</td>
+                <td>10.12.21</td>
+                <td><button type="button" class="queue-button condition shine-button">Не выполнено</button></td>
+            </tr>
+            <tr>
+
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    </div>
+
+
     <div class = "event__article">
         <h3 class = "heading">Ближайшее событие:</h3>
-        <p>Встреча участников ИТМО "Панчлайн" <strong>26 октября</strong></p>
+        <p>Встреча участников ИТМО "Панчлайн" <strong>26 ноября</strong></p>
         <a href="https://vk.com/itmopunchline" target="_blank">Подробнее...</a>
     </div>
-    <div class = "content">
-        <h2 class="heading heading_centre">Тут будет ваше видео</h2>
-    </div>
+
 
 
 
@@ -94,5 +157,6 @@
     <div class = float_clear></div>
 </footer>
 <script src="JS/AnimScroll.js"></script>
+<script src = "JS/ActiveMenu.js"></script>
 </body>
 </html>
