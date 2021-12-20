@@ -1,26 +1,32 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+
     <title>Гендерная интрига</title>
     <link rel="stylesheet" href="CSS/styles.css" type="text/css">
-    <link rel="stylesheet" href="CSS/styles_connection.css" type="text/css">
+    <link rel="stylesheet" href="CSS/swiper.css" type="text/css">
     <meta charset="utf-8">
     <meta name="keywords" content="Гендерная интрига, ИТМО Панчлайн">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital@1&display=swap" rel="stylesheet">
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+    <script src="JS/Swiper.js"></script>
 </head>
 
-<body class = b-page>
+<body class = "b-page b-page_d">
 
-<div class="b-page__line-header">
+<div class="b-page__line-header ">
     <nav class="b-page__head-line">
-        <ul class="b-menu">
+        <ul class="b-menu b-menu-no">
             <li class = "menu__item">
                 <a class = "menu__link floating-button" href="index.html">Главная страница</a>
             </li>
             <li class = "menu__item">
-                <a class = "menu__link floating-button" href="video.html">Задачи</a>
+                <a class = "menu__link floating-button menu__item_active" href="video.html">Задачи</a>
             </li>
             <li class = "menu__item">
                 <a class = "menu__link floating-button" href="cards.html">Карты</a>
@@ -29,7 +35,7 @@
                 <a class = "menu__link floating-button" href="Galerie.html">Галерея</a>
             </li>
             <li class = "menu__item">
-                <a class = "menu__link floating-button menu__item_active" href="connection.html">Обратная связь</a>
+                <a class = "menu__link floating-button" href="connection.html">Обратная связь</a>
             </li>
 
 
@@ -53,22 +59,49 @@
 <div class ="b-page__line-black">
     <div class = blockquote__section>
         <blockquote>
-            <p class = "anim-items">Hаша команда как фраза ”ВЫ ЗАКРЫЛИ ВСЕ ДОЛГИ”, все хотят нас услышать</p>
+            <p class="anim-items">Hаша команда как фраза ”ВЫ ЗАКРЫЛИ ВСЕ ДОЛГИ”, все хотят нас услышать</p>
             <cite class="cite__blockquote anim-items">Павел Борисенко</cite>
         </blockquote>
     </div>
 </div>
 
 
-<main class = "b-page__line">
-    <form class="decor">
-        <div class="form-inner">
-            <h2 class="heading">Написать нам</h2>
-            <input type="text" placeholder="Username">
-            <input type="email" placeholder="Email"><textarea placeholder="Сообщение..." rows="3"></textarea>
-            <input type="submit" value="Отправить">
+<main class = "b-page__line b-page__line-header_d">
+
+        <div class="swiper mySwiper b-page__line-header_d_swiper">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <img src="images/1.png" class="img__team_itemm">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/2.png" class="img__team_itemm">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/3.png" class="img__team_item">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/4.png" class="img__team_item">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/5.png" class="img__team_item">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/6.png" class="img__team_itemm">
+                </div>
+
+            </div>
+
+            <div class="swiper-pagination"></div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </div>
-    </form>
+
+
+
+
+
 
 </main>
 

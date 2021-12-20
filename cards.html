@@ -4,16 +4,18 @@
     <title>Гендерная интрига</title>
     <link rel="stylesheet" href="CSS/styles.css" type="text/css">
     <link rel="stylesheet" href="CSS/styles_connection.css" type="text/css">
+    <link rel="stylesheet" href="CSS/cards.css" type="text/css">
     <meta charset="utf-8">
     <meta name="keywords" content="Гендерная интрига, ИТМО Панчлайн">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="JS/Card.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital@1&display=swap" rel="stylesheet">
 </head>
 
-<body class = b-page>
+<body class = "b-page b-page_d">
 
-<div class="b-page__line-header">
+<div class="b-page__line-header b-page__line-header_d">
     <nav class="b-page__head-line">
         <ul class="b-menu">
             <li class = "menu__item">
@@ -29,7 +31,7 @@
                 <a class = "menu__link floating-button" href="Galerie.html">Галерея</a>
             </li>
             <li class = "menu__item">
-                <a class = "menu__link floating-button menu__item_active" href="connection.html">Обратная связь</a>
+                <a class = "menu__link floating-button" href="connection.html">Обратная связь</a>
             </li>
 
 
@@ -61,14 +63,32 @@
 
 
 <main class = "b-page__line">
-    <form class="decor">
-        <div class="form-inner">
-            <h2 class="heading">Написать нам</h2>
-            <input type="text" placeholder="Username">
-            <input type="email" placeholder="Email"><textarea placeholder="Сообщение..." rows="3"></textarea>
-            <input type="submit" value="Отправить">
+
+
+        <div class="card_line">
+
+
+                <button id="add_button">Добавить надпись на Латыни</button>
+
+                <div id="cards" class="container_card">
+
+                    <div id="load_" class="card disabled"></div>
+
+                </div>
+
+                <template id="template_card">
+                    <div class="card">
+                        <h3>Что-то на Латыни:</h3>
+                        <h2 class="title_card" id="title_card"></h2>
+                        <div class="card_body" id="card_body"></div>
+                    </div>
+                </template>
+
+
         </div>
-    </form>
+
+
+
 
 </main>
 

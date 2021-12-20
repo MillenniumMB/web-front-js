@@ -1,6 +1,7 @@
 
-function ADD_ROW(Data_new) {
-    let newRow = document.getElementById("queue-table").insertRow();
+function add_row(Data_new) {
+    const card = document.getElementById("template_card").content.cloneNode(true);
+    let newRow = document.getElementById("-table").insertRow();
     let newCell = newRow.insertCell(0)
     newCell.innerText=Data_new.name;
     newCell = newRow.insertCell(1)
@@ -8,80 +9,97 @@ function ADD_ROW(Data_new) {
     newCell = newRow.insertCell(2)
     newCell.innerText=Data_new.deadline;
     newCell = newRow.insertCell(3)
-    newCell.innerHTML = "<button type=\"button\" class=\"queue-button condition shine-button\">Не выполнено</button>";
+    if (Data_new.condition == "performed") {
+        newCell.innerHTML = "<button type=\"button\" class=\"-button condition shine-button\">Выполнено</button>" +
+            "<button type=\"button\" class=\"-button delete_button\">x</button></td>";
+    }
+    else{
+        newCell.innerHTML = "<button type=\"button\" class=\"-button condition shine-button\">Не выполнено</button>" +
+            "<button type=\"button\" class=\"-button delete_button\">x</button></td>";
+    }
 
 }
 
+function StorageClear(storage){
+    let count = storage.getItem("Count")
+    console.log(count)
+    //storage.setItem("Count", String(count - 1))
+
+    let last_id = 0;
+    for (let i = 1; i < count; i ++ ){
+
+        let serialData = storage.getItem(String(i));
+        storage.removeItem(i)
+        storage.setItem(String(i), serialData);
+    }
+    //storage.removeItem(count)
+}
 
 //Вот тут будет обработка кнопки, если я успею ее сделать
-/*
 
-function initButtonGroup(parentId) {
-    let buttonGroup = document.getElementById(parentId),
-        i = 0,
-       // len = buttonGroup.childNodes.length,
-        button,
-        len_ = buttonGroup.querySelectorAll("BUTTON");
-    handleButtonGroupClick = initClickHandler(parentId);
-
-    for (; i < len_; i += 1) {
-        button = buttonGroup.childNodes[i];
-        if (button.nodeName === 'BUTTON') {
-            button.addEventListener('click', handleButtonGroupClick);
-        }
-    }
-}
-
-function initClickHandler(parentId) {
-    return function(e) {
-        var buttonGroup = document.getElementById(parentId),
-            i = 0,
-            len = buttonGroup.childNodes.length,
-            button;
-
-        e.preventDefault();
-
-        for (; i < len; i += 1) {
-            button = buttonGroup.childNodes[i];
-            if (button.nodeName === 'BUTTON') {
-                button.className = '';
-            }
-        }
-
-        e.target.className = '.active_bottom_';
-    };
-}
-
-
-
-initButtonGroup('queue-table');
-
-
-*/
 
 window.addEventListener('load', () => {
 
+
     const storage = window.localStorage;
+
+
+    console.log(storage.getItem("Count"));
+
     if (storage.getItem("Count") == null) {
         storage.setItem("Count", "0");
     } else {
         let num = 1;
         while (true) {
+            console.log(storage.getItem("Count"));
             let returnData = localStorage.getItem(String(num));
+            console.log(returnData);
             if (returnData == null) {
                 break;
             }
+
             let Data_new = JSON.parse(returnData);
-            ADD_ROW(Data_new);
+            add_row(Data_new);
             num = num + 1;
         }
     }
 
-
-
-
-
     const form = document.getElementById("queue-web");
+
+    function  buttons_delete_() {
+        // слушаем все кнопки для удаления
+        let buttons_delete = document.getElementsByClassName("delete_button"); //returns a nodelist
+        for (let i = 0; i < buttons_delete.length; i++) {
+            buttons_delete[i].addEventListener("click", function () {
+                RemoveRow(this, i);
+            }, false);
+        }
+    }
+
+    //слушаем все кнопки для пометки
+
+    function  buttons_() {
+        let buttons = document.getElementsByClassName("condition"); //returns a nodelist
+        for (let i = 0; i < buttons.length; i++) {
+            buttons[i].addEventListener("click", function () {
+                buttonsControl(this, i);
+            }, false);
+        }
+    }
+
+    buttons_delete_();
+    buttons_();
+
+    function buttonsControl(button, i) {
+        console.log(i);
+        button.innerHTML = "Выполнено";
+        let returnData = localStorage.getItem(String(i));
+        let Data_new = JSON.parse(returnData);
+        Data_new.condition = "performed";
+        const serialData = JSON.stringify(Data_new);
+        storage.setItem(String(i), serialData);
+
+    }
 
     document.getElementById("queue-btn").addEventListener('click', function(e) {
         const ev = new Event("submit");
@@ -103,51 +121,78 @@ window.addEventListener('load', () => {
         Count = Count + 1;
         storage.setItem(String(Count), serialData);
         storage.setItem("Count", String(Count));
-        ADD_ROW(data);
+        add_row(data);
         e.target.reset(); // очистить форму
+
+
+       // buttons_delete_();
+        //buttons_();
+
+
+          let buttons_delete = document.getElementsByClassName("delete_button"); //returns a nodelist
+            buttons_delete[buttons_delete.length - 1].addEventListener("click", function() {
+                RemoveRow(this, buttons_delete.length - 1);
+            }, false);
+
+        let buttons = document.getElementsByClassName("condition"); //returns a nodelist
+        for (let i = 0; i < buttons.length; i++) {
+            buttons[buttons.length - 1].addEventListener("click", function () {
+                buttonsControl(this, buttons.length - 1);
+            }, false);
+        }
+
     });
 
 
 
-    document.getElementById("clear-btn").addEventListener('click', function(e) {
+    function RemoveRow(button, id) {
+        console.log(id)
+
+
+        let count = storage.getItem("Count")
+        console.log(id, count)
+        storage.setItem("Count", String(count - 1))
+        storage.removeItem(id)
+        for (let i = id; i < count; i ++ ){
+            let serialData = storage.getItem(String(i + 1));
+            storage.removeItem(i)
+            storage.setItem(String(i), serialData);
+        }
+        storage.removeItem(count)
+
+
+
+       //storage.removeItem(id)
+        //  Count = Count - 1
+        //  storage.setItem("Count", String(Count));
+        // storage.setItem(String(Count), serialData);
+
 
         const table = document.getElementById("paragraph_table");
-
-        console.log(table)
         let someElementsItems = table.querySelectorAll("tr");
-        if (someElementsItems.length > 1){
-            let lastElement = someElementsItems[someElementsItems.length -1];
-            console.log(lastElement)
-            lastElement.parentNode.removeChild(lastElement);
+        if (someElementsItems.length > 1) {
+            let elt = button.parentElement.parentElement;
+            elt.remove()
 
             let Count = Number(storage.getItem("Count"));
-            console.log(Count)
-            storage.removeItem(Count)
-            Count = Count - 1
-            storage.setItem("Count", String(Count));
-           // storage.setItem(String(Count), serialData);
-           // storage.setItem("Count", String(Count));
+
+           // buttons_delete_();
+           // buttons_();
+
+
         }
-        //let childrenCount = document.getElementByCount("tr").childNodes.length;
-      //  let child = document.getElementByCount("tr").childNodes[childrenCount - 1];
-        //alert(child)
-      //   const table = document.getElementByCount("queue-table");
-       // const oldChild = document.getElementByCount("tbody");
+    }
 
-       // const tr_all = oldChild.querySelectorAll(tr);
 
-        //let tr_last = tr_all[tr_all.length - 1];
-       // alert(tr_last);
-        //alert("aaaa");
-        //tr_last.remove();
+    document.getElementById("clear-btn").addEventListener('click', function(e) {
 
-        //let tr_el = document.createElement("tr");
+        const table = document.getElementById('-table');
+        const oldChild = table.querySelector('tbody');
+        let tbody =  document.createElement("tbody");
+        tbody.appendChild(document.createElement("tr"));
+        table.replaceChild(tbody, oldChild);
+        storage.clear();
 
-       // let tbody =  document.createElement("tbody");
-       // tbody.appendChild(document.createElement("tr"));
-        //table.replaceChild(tbody, oldChild);
-      //  oldChild.replaceChild(tr_el, tr_last);
-       // storage.clear();
     });
 
 });
