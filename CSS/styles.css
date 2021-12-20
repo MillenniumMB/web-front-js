@@ -34,6 +34,13 @@
 
 }
 
+.b-page__line_black{
+    margin: 100px 30px 250px;
+    background: black;
+    color: white;
+}
+
+
 .b-page__footer{
     background: url(../images/background-food.jpg) no-repeat 100% 15%;
     background-size: 100%;
