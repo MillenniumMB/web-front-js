@@ -29,7 +29,7 @@ window.addEventListener('load', () => {
             const value = localStorage[key];
             let Data_new = JSON.parse(value);
             add_row(Data_new);
-            console.log(`${key}: ${value}`);
+          //  console.log(`${key}: ${value}`);
     }
 
 
@@ -64,7 +64,7 @@ window.addEventListener('load', () => {
         if (data.name === '' || data.task === '') {;
             return;
         }
-        console.log(data.counts)
+       // console.log(data.counts)
         const serialData = JSON.stringify(data);
         storage.setItem(String(serialData), serialData);
         storage.setItem("count", String(count));
@@ -90,7 +90,7 @@ window.addEventListener('load', () => {
             counts: td[3].innerText
         };
         const serialData = JSON.stringify(data);
-        console.log(serialData)
+       // console.log(serialData)
         storage.removeItem(serialData);
 
         const table = document.getElementById("paragraph_table");
