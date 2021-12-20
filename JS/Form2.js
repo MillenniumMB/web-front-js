@@ -5,6 +5,7 @@ function add_row(Data_new) {
     td[0].innerText = Data_new.name;
     td[1].innerText = Data_new.task;
     td[2].innerText = Data_new.deadline;
+    td[3].innerText = Data_new.counts;
     let new_row = document.getElementById("paragraph_table")
     new_row.appendChild(newCell);
 
@@ -16,12 +17,19 @@ window.addEventListener('load', () => {
         //window.localStorage.clear();
 
         const storage = window.localStorage;
+        if (storage.getItem("count") == null) {
+            storage.setItem("count", "0");
+        }
+        let count = Number(storage.getItem("count"))
         for (let i = 0, length = storage.length; i < length; i++) {
             const key = localStorage.key(i);
+            if (key == "count") {
+                continue;
+            }
             const value = localStorage[key];
             let Data_new = JSON.parse(value);
             add_row(Data_new);
-          // console.log(`${key}: ${value}`);
+            console.log(`${key}: ${value}`);
     }
 
 
@@ -46,16 +54,20 @@ window.addEventListener('load', () => {
 
     document.getElementById("line-web").addEventListener('submit', function(e) {
 
+        count += 1;
         const data = {
             name: form.querySelector('[name="Имя"]').value.toLowerCase(),
             task: form.querySelector('[name="Задача"]').value.toLowerCase(),
             deadline: String(form.querySelector('[name="Дедлайн"]').value),
+            counts: String(count)
         };
         if (data.name === '' || data.task === '') {;
             return;
         }
+        console.log(data.counts)
         const serialData = JSON.stringify(data);
         storage.setItem(String(serialData), serialData);
+        storage.setItem("count", String(count));
         add_row(data);
         e.target.reset(); // очистить форму
 
@@ -75,13 +87,15 @@ window.addEventListener('load', () => {
             name: td[0].innerText.toLowerCase(),
             task: td[1].innerText.toLowerCase(),
             deadline: td[2].innerText,
+            counts: td[3].innerText
         };
         const serialData = JSON.stringify(data);
+        console.log(serialData)
         storage.removeItem(serialData);
 
         const table = document.getElementById("paragraph_table");
         let someElementsItems = table.querySelectorAll("tr");
-        if (someElementsItems.length > 1) {
+        if (someElementsItems.length > 0) {
             let elt = button.parentElement.parentElement;
             elt.remove()
         }

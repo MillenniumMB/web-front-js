@@ -77,16 +77,16 @@
                     <input required type="text" class = "input_form_p" id="name" name="Имя" placeholder="Введите имя..."/>
                 </div>
 
-                <div class="queue-row">
+                <div class="web-row">
                     <!-- <label class="my-label" for="task">Задача:</label> -->
                      <input required type="text" id="task" class = "input_form_p" name="Задача"  placeholder="Введите задачу..."/>
                  </div>
-                 <div class="queue-row">
+                 <div class="web-row">
                     <!-- <label class="my-label">Дедлайн:</label> -->
                      <input required type="date" class = "input_form_p" name="Дедлайн" placeholder="Введите дату дедлайна..." />
                  </div>
                 </div>
-                 <div class="queue-row">
+                 <div class="web-row">
                      <button type="submit" class="-button shine-button" id="add-btn">Добавить</button>
                      <button type="button" class="-button shine-button" id="clear-btn">Очистить</button>
                  </div>
@@ -107,19 +107,21 @@
             </thead>
 
             <tbody id = "paragraph_table">
+            <!--
             <tr>
                 <td>Для всех</td>
                 <td>Сбор в воскресенье (задача не выполнима)</td>
                 <td>2021-12-26</td>
                 <td><button type="button" class="-button delete_button shine-button">Закрыть</button></td>
             </tr>
-
+-->
 
             <template id="main-todo-table">
                 <tr class = "todo_list">
                     <td ></td>
                     <td ></td>
                     <td ></td>
+                    <td class="disabled"></td>
                     <td><button type="button" class="-button delete_button shine-button">Закрыть</button> </td></td>
                     <!--
                     <template id ="main-todo-table_v1">

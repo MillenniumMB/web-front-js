@@ -20,7 +20,7 @@
     justify-content: center;
 }
 
-.queue-row{
+.web-row{
     margin-top: 2%;
     display: flex;
     justify-content: center;
@@ -45,6 +45,7 @@
 
 
 table {
+    min-width: 700px;
     font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
     font-size: 14px;
     text-align: left;
@@ -129,4 +130,8 @@ table td:last-child {
 .shine-button:hover:before {
     left: 150px;
     transition: .5s ease-in-out;
+}
+
+.disabled {
+    display: none;
 }
