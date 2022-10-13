@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Гендерная интрига</title>
+    <link rel="stylesheet" href="CSS/styles.css" type="text/css">
+    <link rel="stylesheet" href="CSS/form.css" type="text/css">
+
+    <meta charset="utf-8">
+    <meta name="keywords" content="Гендерная интрига, ИТМО Панчлайн">
+    <script src="JS/Form2.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital@1&display=swap" rel="stylesheet">
+</head>
+
+<body class = b-page>
+
+<div class="b-page__line-header">
+    <nav class="b-page__head-line">
+        <ul class="b-menu">
+            <li class = "menu__item">
+                <a class = "menu__link floating-button" href="index.html">Главная страница</a>
+            </li>
+            <li class = "menu__item">
+                <a class = "menu__link floating-button menu__item_active" href="video.html">Задачи</a>
+            </li>
+            <li class = "menu__item">
+                <a class = "menu__link floating-button" href="cards.html">Карты</a>
+            </li>
+            <li class = "menu__item">
+                <a class = "menu__link floating-button" href="Galerie.html">Галерея</a>
+            </li>
+            <li class = "menu__item">
+                <a class = "menu__link floating-button" href="connection.html">Обратная связь</a>
+            </li>
+
+
+        </ul>
+    </nav>
+
+
+    <div class="b-page__head-line">
+        <header class = "b-header">
+
+            <div class="b-head__heading">
+                <h1 class = "heading heading__header">
+                    Гендерная интрига
+                </h1>
+            </div>
+        </header>
+    </div>
+
+</div>
+
+<div class ="b-page__line-black">
+    <div class = blockquote__section>
+        <blockquote>
+            <p class="anim-items">Hаша команда как фраза ”ВЫ ЗАКРЫЛИ ВСЕ ДОЛГИ”, все хотят нас услышать</p>
+            <cite class="cite__blockquote anim-items">Павел Борисенко</cite>
+        </blockquote>
+    </div>
+</div>
+
+
+<main class = "b-page__line">
+
+
+
+    <div class = 'form_event'>
+
+        <div class = "left_column">
+            <form class="line-web" id="line-web">
+
+                <div class="line-flex">
+                <div class="web-row">
+                  <!--  <label class="my-label" for="name">Имя:</label> -->
+                    <input required type="text" class = "input_form_p" id="name" name="Имя" placeholder="Введите имя..."/>
+                </div>
+
+                <div class="web-row">
+                    <!-- <label class="my-label" for="task">Задача:</label> -->
+                     <input required type="text" id="task" class = "input_form_p" name="Задача"  placeholder="Введите задачу..."/>
+                 </div>
+                 <div class="web-row">
+                    <!-- <label class="my-label">Дедлайн:</label> -->
+                     <input required type="date" class = "input_form_p" name="Дедлайн" placeholder="Введите дату дедлайна..." />
+                 </div>
+                </div>
+                 <div class="web-row">
+                     <button type="submit" class="-button shine-button" id="add-btn">Добавить</button>
+                     <button type="button" class="-button shine-button" id="clear-btn">Очистить</button>
+                 </div>
+
+             </form>
+         </div>
+
+     <div class="table-responsive">
+         <table id="-table">
+
+             <thead>
+             <tr>
+                 <th>Имя</th>
+                <th>Задача</th>
+                <th>Дедлайн</th>
+                <th></th>
+            </tr>
+            </thead>
+
+            <tbody id = "paragraph_table">
+            <!--
+            <tr>
+                <td>Для всех</td>
+                <td>Сбор в воскресенье (задача не выполнима)</td>
+                <td>2021-12-26</td>
+                <td><button type="button" class="-button delete_button shine-button">Закрыть</button></td>
+            </tr>
+-->
+
+            <template id="main-todo-table">
+                <tr class = "todo_list">
+                    <td ></td>
+                    <td ></td>
+                    <td ></td>
+                    <td class="disabled"></td>
+                    <td><button type="button" class="-button delete_button shine-button">Закрыть</button> </td></td>
+                    <!--
+                    <template id ="main-todo-table_v1">
+                        <td><button type="button" class="-button condition shine-button">Не выполнено</button>
+                            <button type="button" class="-button delete_button">x</button> </td>
+                    </template>
+
+                    <template id ="main-todo-table_v2">
+                        <td>  <button type="button" class="-button condition shine-button">Выполнено</button>
+                            <button type="button" class="-button delete_button">x</button></td>
+                    </template>
+                    -->
+
+                </tr>
+            </template>
+
+
+
+            </tbody>
+
+
+        </table>
+    </div>
+
+
+    </div>
+
+
+    <div class = "event__article">
+        <h3 class = "heading">Ближайшее событие:</h3>
+        <p>Встреча участников ИТМО "Панчлайн" <strong>26 ноября</strong></p>
+        <a href="https://vk.com/itmopunchline" target="_blank">Подробнее...</a>
+    </div>
+
+
+
+
+</main>
+
+
+
+<footer class = "b-page__footer">
+    <div class="social__footer">
+        <h3 class = "heading">Соц сети:</h3>
+        <p class = "text__social">Гендерная интрига в
+            <a class ="link__social" href="https://www.instagram.com/gender_intriga/?hl=ru" target="_blank"><img src="images/inst2.png" width="15" height="15">ИНСТАГРАММЕ</a>
+        </p>
+        <p class = "text__social">Итмо "Панчлайн"
+            <a class = "link__social" href="https://vk.com/itmopunchline" target="_blank"><img src="images/vk3.png" width="15" height="15">ВКОНТАКТЕ</a>
+        </p>
+    </div>
+
+    <div class="footer_logo">
+        <figure class figure__footer>
+            <img src="images/logo2.jpg" width="250" height="150">
+            <figcaption>&copy 2020 Гендерная Интрига</figcaption>
+        </figure>
+    </div>
+    <div class = float_clear></div>
+</footer>
+<script src="JS/AnimScroll.js"></script>
+<script src = "JS/ActiveMenu.js"></script>
+</body>
+</html>
